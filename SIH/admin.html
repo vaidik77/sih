@@ -13,30 +13,9 @@
             padding: 20px 10px;
         }  
 
-        .header a {
-            float: left;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 18px; 
-            line-height: 25px;
-            border-radius: 4px;
-        }
-        
-        .header a.logo {
-            font-size: 25px;
-            font-weight: bold;
-        }
-        
-        .header a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        
-        .header a.active {
-            background-color: dodgerblue;
-            color: white;
+        .setLogo{
+            margin-left: 10%;
+            width:100px;
         }
         
         .header-right {
@@ -341,6 +320,7 @@ width: 40px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 8px;
   }
    
   .btn2:hover {
@@ -366,8 +346,13 @@ width: 40px;
   margin: 4px 2px;
   cursor: pointer;
 }
+
 #dashboard-area{
 overflow: scroll;
+}
+.sikkim_heading{
+    font-size: 40px;
+    text-align: center;
 }
 @media(max-width: 375px){
 	.w3hubs-nav ul li.p1 {
@@ -380,9 +365,9 @@ overflow: scroll;
 <body>
 
     <div class="header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Seal_of_Sikkim.svg/1200px-Seal_of_Sikkim.svg.png" height="80px">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Seal_of_Sikkim.svg/1200px-Seal_of_Sikkim.svg.png" height="80px" class="setLogo">
         <div class="header-right">
-                <h2>Sikkim Teacher  Eligibility Test (STET)</h2>
+                <h2 class="sikkim_heading">Sikkim Teacher  Eligibility Test (STET)</h2>
         </div>
     </div>
 
@@ -390,7 +375,7 @@ overflow: scroll;
         
         <nav id='dashboard-menu'>
 
-            <div class="dashborad-menu-item active" id="show-notice" onclick="uploadNotice()"> Add notice </div>
+            <div class="dashborad-menu-item" id="show-notice" onclick="uploadNotice()"> Add notice </div>
             <div class="dashborad-menu-item" id="view-application" onclick="viewApplication()"> View appplication </div>
             <div class="dashborad-menu-item" id="upload-result" onclick="uploadResult()"> Upload result </div>
             
@@ -458,11 +443,15 @@ overflow: scroll;
   </div>
 <br>
   <div class="footer-end">
-        <p>Desing By: <a href="https://w3hubs.com/">W3HUBS.com</a></p>
+        <p><a href="#">Sikkim Educational Department</a></p>
   </div>
     <script>
     function uploadResult(){
         document.getElementById('dashboard-area').innerHTML=``;
+        
+        document.getElementById('view-application').classList.remove("active");
+        document.getElementById('show-notice').classList.remove("active");
+        document.getElementById('upload-result').classList.toggle("active");
         document.getElementById('dashboard-area').innerHTML=`<div class="result-style"> Add Result :- </div> 
         <div>
         <lable for="Secondary Teacher (Paper 1)" >Secondary Teacher (Paper 1)</lable>
@@ -480,6 +469,10 @@ overflow: scroll;
     }
     function uploadNotice(){
         document.getElementById('dashboard-area').innerHTML=``;
+        document.getElementById('show-notice').classList.toggle("active");
+        document.getElementById('view-application').classList.remove("active");
+        
+        document.getElementById('upload-result').classList.remove("active");
         document.getElementById('dashboard-area').innerHTML=`<div id="myform">
                     <center><b><span style="font-size: 35px;">Add new notice <h2> </b></center>
                         <hr>
@@ -519,17 +512,20 @@ overflow: scroll;
 
     function viewApplication(){
         document.getElementById('dashboard-area').innerHTML=``;
+        
+        document.getElementById('upload-result').classList.remove("active");
+        document.getElementById('show-notice').classList.remove("active");
+        document.getElementById('view-application').classList.toggle("active");
         document.getElementById('dashboard-area').innerHTML=`
         <div class="row">
                 <div class="col-25">
-                  <label for="applicationId" style="font-size:23px;">Application Id</label>
+                  <label for="applicationId" style="font-size:32px; margin-top:8px;">Application Id-></label>
                 </div>
                 <div class="col-75">
-                  <input type="text" name="applicationId" placeholder="Your id" style="width: 95%;
-                    padding: 4px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    resize: vertical;" >
+                  <input type="text" name="applicationId" placeholder="Your id" style="width: 100%;
+                                padding: 12px 20px;
+                                margin: 8px 0;
+                                box-sizing: border-box;" >
                 </div>
             </div> 
         <div class="row col-25">
