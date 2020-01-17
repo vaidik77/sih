@@ -91,6 +91,18 @@ browser supported, best quality world class designs.*/
 	box-sizing: border-box;
 }
 
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+   
+  .col-75 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
 h1 {
 	position: absolute;
 	top: 40%;
@@ -322,7 +334,26 @@ width: 40px;
     height: 40px;
 }
 }
+.btn2 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+   
+  .btn2:hover {
+    background-color: #45a049;
+  }
 
+.result-style{
+    font-size: 40px;
+    color: #0a0a0a;
+    background-color: #B8B8B8;
+
+}
+  
 .btn{
   background-color: #4CAF50;
   border: none;
@@ -343,6 +374,7 @@ overflow: scroll;
     padding-top: 0px;
 }
 }
+
     </style>
 </head>
 <body>
@@ -359,7 +391,7 @@ overflow: scroll;
         <nav id='dashboard-menu'>
 
             <div class="dashborad-menu-item active" id="show-notice" onclick="uploadNotice()"> Add notice </div>
-            <div class="dashborad-menu-item"> View appplication </div>
+            <div class="dashborad-menu-item" id="view-application" onclick="viewApplication()"> View appplication </div>
             <div class="dashborad-menu-item" id="upload-result" onclick="uploadResult()"> Upload result </div>
             
         </nav>
@@ -431,7 +463,20 @@ overflow: scroll;
     <script>
     function uploadResult(){
         document.getElementById('dashboard-area').innerHTML=``;
-        document.getElementById('dashboard-area').innerHTML=`Add result :- <input type="file" id="fileinput" class="fileinput1" accept=".csv"/>`;
+        document.getElementById('dashboard-area').innerHTML=`<div class="result-style"> Add Result :- </div> 
+        <div>
+        <lable for="Secondary Teacher (Paper 1)" >Secondary Teacher (Paper 1)</lable>
+        <input type="file" id="fileinput" class="fileinput1" name="Secondary Teacher (Paper 1)" accept=".csv"/>
+        </div>
+        <div>
+        <lable for="Senior Secondary Teacher (Paper 1)" >Senior Secondary Teacher (Paper 1)</lable>
+        <input type="file" id="fileinput" class="fileinput1" name="Senior Secondary Teacher (Paper 1)" accept=".csv"/>
+        </div>
+        <div>
+        <lable for="Physical Education & Health Instructor" >Physical Education & Health Instructor</lable>
+        <input type="file" id="fileinput" class="fileinput1" name="Physical Education & Health Instructor" accept=".csv"/>
+        </div>
+        `;
     }
     function uploadNotice(){
         document.getElementById('dashboard-area').innerHTML=``;
@@ -471,6 +516,28 @@ overflow: scroll;
                      
                     </div>`;
     }
+
+    function viewApplication(){
+        document.getElementById('dashboard-area').innerHTML=``;
+        document.getElementById('dashboard-area').innerHTML=`
+        <div class="row">
+                <div class="col-25">
+                  <label for="applicationId" style="font-size:23px;">Application Id</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="applicationId" placeholder="Your id" style="width: 95%;
+                    padding: 4px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    resize: vertical;" >
+                </div>
+            </div> 
+        <div class="row col-25">
+            <a href="detail.html"><input type="button" value="search" class="btn2"></a>
+        </div>    
+             `;
+    }
+
     function addRow() {
           
           var myName = document.getElementById("name");
