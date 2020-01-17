@@ -1,0 +1,570 @@
+<html>
+
+<head>
+  <title> Profile </title>
+  <link rel="stylesheet" href="profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="header_footer.css">
+
+</head>
+
+<body>
+
+  <div class="header">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Seal_of_Sikkim.svg/1200px-Seal_of_Sikkim.svg.png"
+      height="80px">
+    <div class="header-right">
+      <h1>Sikkim Teacher Eligibility Test (STET)</h1>
+    </div>
+  </div>
+
+  <ul class="navigation">
+    <li class="navigation_item"><a class="active" href="viewProfile.html">Profile</a></li class="navigation_item">
+    <li class="navigation_item"><a href="#">History</a></li>
+    <li class="navigation_item"><a href="#contact">Logout</a></li>
+  </ul>
+
+  <div class="main-section">
+
+    <!-- Section 1 -->
+    <div id="progress-section">
+
+      <ul id="progress">
+        <li>
+          <div class="node green"></div>
+          <p>Registration (<a href="#" class='progress-li-p-a'> Pending </a>) </p>
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p>Bio Data (<a href="#bio-data" onclick="document.getElementById('bio-data').style.display = 'block'"
+              class='progress-li-p-a'> Pending </a>) </p>
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p>Upload Documents (<a href="#upload-documents"
+              onclick="document.getElementById('upload-documents').style.display = 'block'" class='progress-li-p-a'>
+              Pending </a>) </p>
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p>Photo and Signature (<a href="#photo-signature"
+              onclick="document.getElementById('photo-signature').style.display = 'block'" class='progress-li-p-a'>
+              Pending </a>) </p>
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p>Payment (<a href="#" class='progress-li-p-a'> Pending </a>) </p>
+        </li>
+      </ul>
+
+
+    </div>
+
+    <!-- Section 2 -->
+    <div id="notice-section">
+      <h3>NOTICE</h3>
+      <br />
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+      <div>Some content</div>
+
+      <div>Some content</div>
+    </div>
+  </div>
+
+
+  <div id='bio-data' class='pending-section'>
+
+    <h2 class="pending-section-heading">Personal Information</h2>
+
+    <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="post">Post Applied for</label>
+        </div>
+        <div class="col-75">
+          <input type="radio" name="post" value="Secondary Teacher (Paper 1)" checked> Secondary Teacher (Paper 1)
+          <input type="radio" name="post" value="Senior Secondary Teacher (Paper 1)"> Senior Secondary Teacher (Paper 1)
+          <input type="radio" name="post" value="Physical Education & Health Instructor"> Physical Education & Health
+          Instructor
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="district">District</label>
+        </div>
+        <div class="col-75">
+          <select name="district">
+            <option value="North">Sikkim North</option>
+            <option value="South">Sikkim South</option>
+            <option value="East">Sikkim East</option>
+            <option value="West">Sikkim West</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject Applied For</label>
+        </div>
+        <div class="col-75">
+          <select name="subject">
+            <option value="subject">subject 1</option>
+            <option value="subject">subject 2</option>
+            <option value="subject">subject 3</option>
+            <option value="subject">subject 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="qualification">Qualification</label>
+        </div>
+        <div class="col-75">
+          <select name="qualification">
+            <option value="qualification 1">qualification 1</option>
+            <option value="qualification 2">qualification 2</option>
+            <option value="qualification 3">qualification 3</option>
+            <option value="qualification 4">qualification 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="domicile">Are you Domicile of Sikkim</label>
+        </div>
+        <div class="col-75">
+          <select name="domicile">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="category">Category</label>
+        </div>
+        <div class="col-75">
+          <select name="category">
+            <option value="ur">UR</option>
+            <option value="ews">EWS</option>
+            <option value="ebc">EBC</option>
+            <option value="bc">BC</option>
+            <option value="st">ST</option>
+            <option value="sc">SC</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="serviceman">Wheather Ex-serviceman</label>
+        </div>
+        <div class="col-75">
+          <select name="serviceman">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="pwd">Are you Physically disabled person</label>
+        </div>
+        <div class="col-75">
+          <select name="pwd">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="date">Age as on Today</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="date1" name="date">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="fathername">Father Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="father" name="fathername" placeholder="Your father name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="mothername">Mother Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="mother" name="mothername" placeholder="Your mother name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="maritalstatus">Marital Status</label>
+        </div>
+        <div class="col-75">
+          <select name="maritalstatus">
+            <option value="indian">Indian</option>
+            <option value="non-indian">Non-Indian</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="religion">Religion</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="religion1" name="religion" placeholder="Enter your religion..">
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <h3>Permanent Address</h3>
+      <hr />
+      <br />
+      <br />
+
+
+      <div class="row">
+        <div class="col-25">
+          <label for="address">Address</label>
+        </div>
+        <div class="col-75">
+          <textarea rows="4" cols="50" id="paddress" placeholder="Enter your permanent address"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="state">State</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="pstate" name="state" placeholder="Enter your State..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="city">City</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="pcity" name="city" placeholder="Enter your city..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="pincode">Pincode</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="ppincode" name="pincode" placeholder="Enter your pincode">
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <h3>Temporary Address</h3>
+      <hr />
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="col-25">
+          <label for="address">Address</label>
+        </div>
+        <div class="col-75">
+          <textarea rows="4" cols="50" id="taddress" placeholder="Enter your temporary address"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="state">State</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="tstate" name="state" placeholder="Enter your State..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="city">City</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="tcity" name="city" placeholder="Enter your city..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="pincode">Pincode</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="tpincode" name="pincode" placeholder="Enter your pincode">
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <h3> Educational Details </h3>
+      <hr />
+      <br />
+
+      <table style="margin: 3%;">
+        <tr>
+          <th>Qualification Acquired/Examination Passed</th>
+          <th>Name of institution from which Passed</th>
+          <th>Name of university to which institution is afflicated</th>
+          <th>Year of Passing</th>
+          <th>Total Marks</th>
+          <th>Marks obtained</th>
+          <th>Percentage of marks</th>
+        </tr>
+        <tr>
+          <td><label for="tenth">Class X / Matric</label></td>
+          <td><input type="text" id="#" name="tenth"></td>
+          <td><input type="text" id="#" name="tenth"></td>
+          <td><input type="text" id="#" name="tenth"></td>
+          <td><input type="number" id="#" name="tenth"></td>
+          <td><input type="number" id="#" name="tenth"></td>
+          <td><input type="number" max=100 id="#" name="tenth"></td>
+        </tr>
+        <tr>
+          <td><label for="tenth">Class XII / Intermediate</label></td>
+          <td><input type="text" id="#" name="12"></td>
+          <td><input type="text" id="#" name="12"></td>
+          <td><input type="text" id="#" name="12"></td>
+          <td><input type="number" id="#" name="12"></td>
+          <td><input type="number" id="#" name="12"></td>
+          <td><input type="number" max=100 id="#" name="12"></td>
+        </tr>
+        <tr>
+          <td><label for="graduate">Graduate</label></td>
+          <td><input type="text" id="#" name="graduate"></td>
+          <td><input type="text" id="#" name="graduate"></td>
+          <td><input type="text" id="#" name="graduate"></td>
+          <td><input type="number" id="#" name="graduate"></td>
+          <td><input type="number" id="#" name="graduate"></td>
+          <td><input type="number" max=100 id="#" name="graduate"></td>
+        </tr>
+        <tr>
+          <td><label for="postgraduate">Post Graduate</label></td>
+          <td><input type="text" id="#" name="postgraduate"></td>
+          <td><input type="text" id="#" name="postgraduate"></td>
+          <td><input type="text" id="#" name="postgraduate"></td>
+          <td><input type="number" id="#" name="postgraduate"></td>
+          <td><input type="number" id="#" name="postgraduate"></td>
+          <td><input type="number" max=100 id="#" name="postgraduate"></td>
+        </tr>
+        <tr>
+          <td><label for="b.ed">B.ED</label></td>
+          <td><input type="text" id="#" name="b.ed"></td>
+          <td><input type="text" id="#" name="b.ed"></td>
+          <td><input type="text" id="#" name="b.ed"></td>
+          <td><input type="number" id="#" name="b.ed"></td>
+          <td><input type="number" id="#" name="b.ed"></td>
+          <td><input type="number" max=100 id="#" name="b.ed"></td>
+        </tr>
+      </table>
+
+
+
+      <div class="row" style="text-align: center;">
+        <input type="submit" value="Submit and Continue">
+        <input type="submit" value="cancel" style="margin-left: 3%;">
+      </div>
+    </form>
+
+
+  </div>
+
+  <div id='upload-documents' class='pending-section'>
+
+    <h2 class="pending-section-heading">Upload Documents</h2>
+
+    <table style="width: 90%;margin-left: 5%;margin-right: 5%;">
+      <tr>
+        <th>Name of the document</th>
+        <th>Choose file</th>
+      </tr>
+      <tr>
+        <td><label for="">Aadhar Card</label></td>
+        <td><input type="file" class="file" name=""></td>
+      </tr>
+      <tr>
+        <td><label for="">PAN card</label></td>
+        <td><input type="file" class="file" name=""></td>
+      </tr>
+      <tr>
+        <td><label for="">10th marksheet</label></td>
+        <td><input type="file" class="file" name=""></td>
+      </tr>
+      <tr>
+        <td><label for="">12th marksheet</label></td>
+        <td><input type="file" class="file" name=""></td>
+      </tr>
+      <tr>
+        <td><label for="">Graduation</label></td>
+        <td><input type="file" id="#" class="file" name=""></td>
+      </tr>
+      <tr>
+        <td><label for="">Post Graduation</label></td>
+        <td><input type="file" id="#" class="file" name=""></td>
+      </tr>
+
+    </table>
+
+    <br>
+
+    <div class="row" style="text-align: center;margin-top: 2%;">
+      <input type="submit" value="Submit and Continue">
+    </div>
+
+  </div>
+
+  <div id='photo-signature' class='pending-section'>
+
+    <h2 class="pending-section-heading">Photo and Signature</h2>
+
+    <table style="width: 90%;margin-left: 5%;margin-right: 5%;">
+      <tr>
+        <th>Name of the document</th>
+        <th>Choose file</th>
+      </tr>
+      <tr>
+        <td><label for="">Photo</label></td>
+        <td><input type="file" class="file" id="photo" onchange="Filevalidationphoto()"></td>
+      </tr>
+      <tr>
+        <td><label for="">Signature</label></td>
+        <td><input type="file" class="file" id="signature" onchange="Filevalidationsign()"></td>
+      </tr>
+    </table>
+
+    <br>
+
+    <div class="row" style="text-align: center;margin-top: 2%;">
+      <input type="submit" value="Submit and Continue">
+    </div>
+
+  </div>
+
+
+
+  <footer>
+    <div class="w3hubs-footer">
+
+      <div class="w3hubs-icon">
+        <ul>
+          <li><a href="#" target="black"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-youtube-play"></i></a></li>
+        </ul>
+      </div>
+      <div class="w3hubs-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li class="p1"><a href="#">Contact Us</a></li>
+
+
+        </ul>
+      </div>
+      <div class="w3hubs-nav1">
+        <ul>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">new</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Media</a></li>
+
+
+        </ul>
+      </div>
+
+      <div class="w3hubs-nav2">
+        <ul>
+
+          <li><a href="#" title="To Top"><i class="fa fa-chevron-down"></i></a></li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-end">
+      <p>Desing By: <a href="https://w3hubs.com/">W3HUBS.com</a></p>
+    </div>
+  </footer>
+
+  <script src="profile.js"></script>
+
+</body>
+
+</html>

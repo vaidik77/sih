@@ -1,0 +1,231 @@
+*, *:after, *:before { margin:0; padding:0; }
+
+body {
+    background-color: #ffffff;
+    font-family: Helvetica, sans-serif;
+}
+
+.node {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    display:inline-block;
+    transition: all 1000ms ease;
+}
+
+.activated {
+    box-shadow: 0px 0px 3px 2px #c2ffc2cc;
+}
+
+.divider {
+    height: 90px;
+    width: 4px;
+    margin-left: 6px;
+    transition: all 2000ms ease;
+}
+
+li p {
+    display:inline-block;
+    margin-left: 25px;
+}
+
+li {
+    list-style: none;
+    line-height: 1px;
+}
+
+.progress-li-p-a {
+  color: #565656;
+  font-weight: bold;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.main-section {
+    padding-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 35%;
+}
+
+.pending-section {
+  
+  display: none;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.pending-section-heading {
+
+  padding:1%;
+  margin-bottom: 5%;
+  text-align: center;
+  text-decoration: underline;
+  background-color: #5cb85c;
+  border-radius: 5px;
+}
+
+#progress-section {
+    width: 34%;
+    float: left;
+    padding: 3%;
+    background-color: #ffffff;
+}
+
+#notice-section {
+    width: 53%;
+    float: left;
+    overflow-y: auto;
+    margin-left: 1%;
+    padding: 3%;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+#bio-data {
+
+  clear: both;
+  
+  
+}
+
+#upload-documents {
+
+    
+}
+
+#photo-signature {
+
+  
+}
+
+   
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+   
+  input[type=date] {
+      width: 25%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+   
+    input[type=radio] {
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin: 10px;
+      resize: vertical;
+    }
+   
+   
+   
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+   
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+   
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+   
+ 
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+   
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  
+  
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  
+   
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .navigation_item {
+    float: left;
+  }
+  
+  .navigation_item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navigation_item a:hover {
+    background-color: #111;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+   
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+  }
+  
+
+.blue { background-color: rgba(82, 165, 255, 1); }
+.green{ background-color: rgba(92, 184, 92, 1) }
+.red { background-color: rgba(255, 148, 148, 1); }
+.grey { background-color: rgba(201, 201, 201, 1); }
