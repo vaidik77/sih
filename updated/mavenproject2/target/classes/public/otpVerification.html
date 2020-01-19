@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="header_footer.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=password], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=date] {
+    width: 25%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=radio] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    resize: vertical;
+  }
+
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  padding: 1.2% 2%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 2% 0%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  width: 80%;
+  margin: 2% 10%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 2% 5%;
+  text-align: center;
+}
+
+.col-25 {
+  float: left;
+  width: 35%;
+  margin-top: 2%;
+  margin-left: 12.5%;
+}
+
+.col-75 {
+  float: left;
+  width: 30%;
+  margin-top: 2%;
+  margin-right: 12.5%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+  * {
+     box-sizing: border-box;
+ }
+ 
+ body {
+ font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ 
+ 
+ 
+ </style>
+</head>
+<body>
+
+
+  <div class="header">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Seal_of_Sikkim.svg/1200px-Seal_of_Sikkim.svg.png"
+      height="80px">
+    <div class="header-right">
+      <h1>Sikkim Teacher Eligibility Test (STET)</h1>
+    </div>
+  </div>
+
+
+<div class="container">
+  <h2 style="text-align: center;">VERIFY YOUR EMAIL & CONTACT</h2>
+
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Enter OTP recieved on Email : </label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="fname" name="firstname" placeholder="******">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Enter OTP recieved on Contact number : </label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="lname" name="lastname" placeholder="******">
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+    
+  </form>
+</div>
+
+
+<footer>
+  <div class="w3hubs-footer">
+
+    <div class="w3hubs-icon">
+      <ul>
+        <li><a href="#" target="black"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" target="black"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#" target="black"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" target="black"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#" target="black"><i class="fa fa-youtube-play"></i></a></li>
+      </ul>
+    </div>
+    <div class="w3hubs-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li class="p1"><a href="#">Contact Us</a></li>
+
+
+      </ul>
+    </div>
+    <div class="w3hubs-nav1">
+      <ul>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">new</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Media</a></li>
+
+
+      </ul>
+    </div>
+
+    <div class="w3hubs-nav2">
+      <ul>
+
+        <li><a href="#" title="To Top"><i class="fa fa-chevron-down"></i></a></li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-end">
+    <p>Desing By: <a href="https://w3hubs.com/">W3HUBS.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

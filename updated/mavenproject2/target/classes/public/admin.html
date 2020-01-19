@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .header {
+            overflow: hidden;
+            color: #ffffff;
+            background-color: #272727;
+            padding: 20px 10px;
+        }  
+
+        .setLogo{
+            margin-left: 10%;
+            width:100px;
+        }
+        
+        .header-right {
+            float: right;
+        }
+
+        #dashboard {
+            height: 500px;
+            
+        }
+
+        #dashboard-menu {
+            width: 15%;
+            height: 100%;
+            float: left;
+            background-color: #f3f3f3;
+            overflow:auto;
+        }
+
+        #dashboard-area {
+            width: 75%;
+            height: 100%;
+            float: right;
+            border: solid;
+        }
+
+        .dashborad-menu-item {
+            
+            font-size: 110%;
+            text-align:left;
+            font-weight: 500;
+            padding: 5% 7%;
+        }
+
+        .dashborad-menu-item:hover {
+            background-color: #D3D3D3;
+        }
+
+        .active {
+            background-color:  	#A9A9A9;
+        }
+        .fileinput1{
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+        /*Whubs.com - Download Free Responsive Website Layout Templates designed on HTML5 CSS3,
+Bootstrap which are 100% Mobile friendly. w3Hubs all Layouts are responsive cross 
+browser supported, best quality world class designs.*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+   
+  .col-75 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+h1 {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50px);
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 10em;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 0 5px 10px rgba(0,0,0,1);
+	mix-blend-mode: overlay;
+	font-family: 'Roboto Slab', serif;
+	box-shadow: 0 5px 10px rgba(0,0,0,1);
+	text-decoration: none;
+}
+.w3hubs-footer{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background:#272727;
+	padding: 20px 0px;
+	
+}
+.w3hubs-icon{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+.w3hubs-icon ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.w3hubs-icon ul li{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px;
+	border-radius: 100%;
+	background:#7DCEA0; 
+}
+.w3hubs-icon ul li a{
+	text-decoration: none;
+	color: #272727;
+	font-size: 25px;
+	display: block;
+}
+.w3hubs-icon ul li a i{
+	line-height: 50px;
+}
+.w3hubs-icon ul li:hover{
+	background: #e67e22;
+}
+.w3hubs-icon ul li a:hover >i{
+	transform: scale(1.6) rotate(25deg);
+}
+.w3hubs-nav{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 25px;
+}
+.w3hubs-nav ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+
+.w3hubs-nav ul li{
+	display: inline-block;
+	margin: 10px 20px;	 
+}
+.w3hubs-nav ul li a{
+	text-decoration: none;
+	outline: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.w3hubs-nav ul li a:hover{
+	color:  #e67e22;
+}
+
+.w3hubs-nav1{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 15px;
+}
+.w3hubs-nav1 ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+
+.w3hubs-nav1 ul li{
+	display: inline-block;
+	margin: 0px 20px;	 
+}
+.w3hubs-nav1 ul li a{
+	text-decoration: none;
+	outline: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.w3hubs-nav1 ul li a:hover{
+	color:  #e67e22;
+}
+.w3hubs-nav2{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+.w3hubs-nav2 ul{
+	
+	text-align: center;
+}
+
+.w3hubs-nav2 ul li{
+	
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px;
+	border-radius: 100%;
+	background:#fff; 
+}
+.w3hubs-nav2 ul li a{
+	text-decoration: none;
+	color: #272727;
+	font-size: 25px;
+	display: block;
+}
+.w3hubs-nav2 ul li a i{
+	line-height: 50px;
+}
+.w3hubs-nav2 ul li:hover{
+	background: #e67e22;
+}
+.w3hubs-nav2 ul li a:hover >i{
+	transform: scale(1.6) rotate(180deg);
+}
+.footer-end{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background: #7DCEA0;
+	padding: 10px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	text-align: center;
+}
+.footer-end p{
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 2px;
+
+}
+.footer-end a{
+
+text-decoration: none;
+color: black
+}
+.footer-end a:hover{
+	color:  #e67e22;
+}
+
+@media(max-width:691px ){
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 16px;
+}
+}
+@media(max-width:604px ){
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 14px;
+}
+.w3hubs-nav ul li{
+	padding: 0px ;
+}
+}
+@media(max-width:559px ){
+
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 13px;
+}
+
+}
+@media(max-width:539px ){
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+    font-size: 11px;
+}
+.w3hubs-nav ul li{
+	margin: 5px 20px;
+}
+.w3hubs-nav ul li.p1 {
+    padding-top: 10px;
+}
+}
+@media(max-width:380px ){
+	.w3hubs-nav ul li,.w3hubs-nav1 ul li{
+		display: block;
+		padding: 5px;
+	}
+.w3hubs-nav2 ul li{
+	display: none;
+}
+.w3hubs-icon ul li a i {
+    line-height: 38px;
+}
+.w3hubs-icon ul li a{
+	font-size: 20px;
+}
+.w3hubs-icon ul li{
+width: 40px;
+    height: 40px;
+}
+}
+.btn2 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+   
+  .btn2:hover {
+    background-color: #45a049;
+  }
+
+.result-style{
+    font-size: 40px;
+    color: #0a0a0a;
+    background-color: #B8B8B8;
+
+}
+  
+.btn{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#dashboard-area{
+overflow: scroll;
+}
+.sikkim_heading{
+    font-size: 40px;
+    text-align: center;
+}
+@media(max-width: 375px){
+	.w3hubs-nav ul li.p1 {
+    padding-top: 0px;
+}
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Seal_of_Sikkim.svg/1200px-Seal_of_Sikkim.svg.png" height="80px" class="setLogo">
+        <div class="header-right">
+                <h2 class="sikkim_heading">Sikkim Teacher  Eligibility Test (STET)</h2>
+        </div>
+    </div>
+
+    <section id='dashboard'>
+        
+        <nav id='dashboard-menu'>
+
+            <div class="dashborad-menu-item" id="show-notice" onclick="uploadNotice()"> Add notice </div>
+            <div class="dashborad-menu-item" id="view-application" onclick="viewApplication()"> View appplication </div>
+            <div class="dashborad-menu-item" id="upload-result" onclick="uploadResult()"> Upload result </div>
+            
+        </nav>
+
+        <div id='dashboard-area'>
+
+            <div id="addnotice">
+                
+                    
+            </div>
+
+            <div id="viewapplication">
+                
+            </div>
+
+            <div id="uploadresult">
+                <!-- Add result :- <input type="file" id="fileinput" class="fileinput1" accept=".csv"/>  -->
+            </div>
+
+        </div>
+
+    </section>
+    <br>
+    <div class="w3hubs-footer">
+   	  
+        <div class="w3hubs-icon">
+            <ul>
+                <li><a href="#" target="black"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="black"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#" target="black"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" target="black"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#" target="black"><i class="fa fa-youtube-play"></i></a></li>
+            </ul>
+        </div>
+        <div class="w3hubs-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li class="p1"><a href="#">Contact Us</a></li>
+                
+
+            </ul>
+        </div>
+  </div>
+
+  <div class="footer-end">
+        <p><a href="#">Sikkim Educational Department</a></p>
+  </div>
+    <script>
+    function uploadResult(){
+        document.getElementById('dashboard-area').innerHTML=``;
+        
+        document.getElementById('view-application').classList.remove("active");
+        document.getElementById('show-notice').classList.remove("active");
+        document.getElementById('upload-result').classList.toggle("active");
+        document.getElementById('dashboard-area').innerHTML=`<div class="result-style"> Add Result :- </div> 
+        <div>
+        <lable for="Secondary Teacher (Paper 1)" >Secondary Teacher (Paper 1)</lable>
+        <input type="file" id="fileinput" class="fileinput1" name="Secondary Teacher (Paper 1)" accept=".csv"/>
+        </div>
+        <div>
+        <lable for="Senior Secondary Teacher (Paper 1)" >Senior Secondary Teacher (Paper 1)</lable>
+        <input type="file" id="fileinput" class="fileinput1" name="Senior Secondary Teacher (Paper 1)" accept=".csv"/>
+        </div>
+        <div>
+        <lable for="Physical Education & Health Instructor" >Physical Education & Health Instructor</lable>
+        <input type="file" id="fileinput" class="fileinput1" name="Physical Education & Health Instructor" accept=".csv"/>
+        </div>
+        `;
+    }
+    function uploadNotice(){
+        document.getElementById('dashboard-area').innerHTML=``;
+        document.getElementById('show-notice').classList.toggle("active");
+        document.getElementById('view-application').classList.remove("active");
+        
+        document.getElementById('upload-result').classList.remove("active");
+        document.getElementById('dashboard-area').innerHTML=`<div id="myform">
+                    <center><b><span style="font-size: 35px;">Add new notice <h2> </b></center>
+                        <hr>
+                    <table>
+                        <tr>
+                            <td><b style="font-size: 22px;">Notice Name:-<b></td>
+                            <td><input type="text" id="name" style="width: 100%;
+                                padding: 12px 20px;
+                                margin: 8px 0;
+                                box-sizing: border-box;"></td>
+                        </tr>
+                        <tr>
+                            <td><b style="font-size: 22px;">Upload notice :-</b></td>
+                            <td>
+                                        
+                                <textarea rows="4" cols="50" class="textareaDesign">
+                                
+                                </textarea>
+
+
+                            <input type="button" id="upload" class="btn" value="Add" onclick="Javascript:addRow()"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    </div>
+                    <hr>
+                    <div id="mydata">
+                    <b><span style="font-size: 35px;">Current data in the system :-</b>
+                    <table id="myTableData"  border="5" cellpadding="5" width="80%" margin-left:"5%" margin-right:"5%"; >
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td style="font-size: 22px;"><b>Notice Name</b></td>
+                            <td style="font-size: 22px;"><b>Upload Notice</b></td>
+                        </tr>
+                    </table>
+                    &nbsp;
+                     
+                    </div>`;
+    }
+
+    function viewApplication(){
+        document.getElementById('dashboard-area').innerHTML=``;
+        
+        document.getElementById('upload-result').classList.remove("active");
+        document.getElementById('show-notice').classList.remove("active");
+        document.getElementById('view-application').classList.toggle("active");
+        document.getElementById('dashboard-area').innerHTML=`
+        <div class="row">
+                <div class="col-25">
+                  <label for="applicationId" style="font-size:32px; margin-top:8px;">Application Id-></label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="applicationId" placeholder="Your id" style="width: 100%;
+                                padding: 12px 20px;
+                                margin: 8px 0;
+                                box-sizing: border-box;" >
+                </div>
+            </div> 
+        <div class="row col-25">
+            <a href="detail.html"><input type="button" value="search" class="btn2"></a>
+        </div>    
+             `;
+    }
+
+    function addRow() {
+          
+          var myName = document.getElementById("name");
+          var upload = document.getElementById("upload");
+          var table = document.getElementById("myTableData");
+       
+          var rowCount = table.rows.length;
+          var row = table.insertRow(rowCount);
+       
+          row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+          row.insertCell(1).innerHTML= myName.value;
+          row.insertCell(2).innerHTML= upload.value;
+       
+      }
+       
+      function deleteRow(obj) {
+            
+          var index = obj.parentNode.parentNode.rowIndex;
+          var table = document.getElementById("myTableData");
+          table.deleteRow(index);
+          
+      }
+       
+      
+      
+    </script>
+</body>
+</html>

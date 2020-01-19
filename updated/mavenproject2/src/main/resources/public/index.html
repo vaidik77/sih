@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+  .header {
+    color: #ffffff;
+    overflow: hidden;
+    background-color: #565656;
+    padding: 20px 10px;
+     }  
+
+  .setLogo{
+    margin-left: 10%;
+    width:100px;
+    }
+        
+    .header-right {
+      float: right;
+      }
+  .sikkim_heading{
+    font-size: 40px;
+    text-align: center;
+  }      
+  
+  .split {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.loginAlignForget{
+  width:70%;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.notice_arrangement{
+  position: absolute;
+  top: 35%;
+  left:10%;
+
+}
+.loginAlign{
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+
+.loginAlignForget{
+  position: absolute;
+  top:65%;
+  left:20%;
+}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+span.signup{
+  float: left;
+
+  font-size: 22px;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 2px;
+  font-size: 22px;
+}
+
+.w3hubs-footer{
+  position: absolute;
+	width: 100%;
+	height: auto;
+	margin: auto;
+  top: 80%;
+	background:#272727;
+	padding: 20px 0px;
+	
+}
+.w3hubs-icon{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+.w3hubs-icon ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.w3hubs-icon ul li{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px;
+	border-radius: 100%;
+	background:#7DCEA0; 
+}
+.w3hubs-icon ul li a{
+	text-decoration: none;
+	color: #272727;
+	font-size: 25px;
+	display: block;
+}
+.w3hubs-icon ul li a i{
+	line-height: 50px;
+}
+.w3hubs-icon ul li:hover{
+	background: #e67e22;
+}
+.w3hubs-icon ul li a:hover >i{
+	transform: scale(1.6) rotate(25deg);
+}
+.w3hubs-nav{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 25px;
+}
+.w3hubs-nav ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+
+.w3hubs-nav ul li{
+	display: inline-block;
+	margin: 10px 20px;	 
+}
+.w3hubs-nav ul li a{
+	text-decoration: none;
+	outline: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.w3hubs-nav ul li a:hover{
+	color:  #e67e22;
+}
+
+.w3hubs-nav1{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 15px;
+}
+.w3hubs-nav1 ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+
+.w3hubs-nav1 ul li{
+	display: inline-block;
+	margin: 0px 20px;	 
+}
+.w3hubs-nav1 ul li a{
+	text-decoration: none;
+	outline: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.w3hubs-nav1 ul li a:hover{
+	color:  #e67e22;
+}
+.w3hubs-nav2{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+.w3hubs-nav2 ul{
+	
+	text-align: center;
+}
+
+.w3hubs-nav2 ul li{
+	
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px;
+	border-radius: 100%;
+	background:#fff; 
+}
+.w3hubs-nav2 ul li a{
+	text-decoration: none;
+	color: #272727;
+	font-size: 25px;
+	display: block;
+}
+.w3hubs-nav2 ul li a i{
+	line-height: 50px;
+}
+.w3hubs-nav2 ul li:hover{
+	background: #e67e22;
+}
+.w3hubs-nav2 ul li a:hover >i{
+	transform: scale(1.6) rotate(180deg);
+}
+.footer-end{
+  position: absolute;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background: #7DCEA0;
+	padding: 10px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+  top: 110%;
+	text-align: center;
+}
+.footer-end p{
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 2px;
+
+}
+.footer-end a{
+
+text-decoration: none;
+color: #fff
+}
+.footer-end a:hover{
+	color:  #e67e22;
+}
+
+@media(max-width:691px ){
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 16px;
+}
+}
+@media(max-width:604px ){
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 14px;
+}
+.w3hubs-nav ul li{
+	padding: 0px ;
+}
+}
+@media(max-width:559px ){
+
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 13px;
+}
+
+}
+@media(max-width:539px ){
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+    font-size: 11px;
+}
+.w3hubs-nav ul li{
+	margin: 5px 20px;
+}
+.w3hubs-nav ul li.p1 {
+    padding-top: 10px;
+}
+}
+@media(max-width:380px ){
+	.w3hubs-nav ul li,.w3hubs-nav1 ul li{
+		display: block;
+		padding: 5px;
+	}
+.w3hubs-nav2 ul li{
+	display: none;
+}
+.w3hubs-icon ul li a i {
+    line-height: 38px;
+}
+.w3hubs-icon ul li a{
+	font-size: 20px;
+}
+.w3hubs-icon ul li{
+width: 40px;
+    height: 40px;
+}
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+  
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Seal_of_Sikkim.svg/1200px-Seal_of_Sikkim.svg.png" height="80px" class="setLogo">
+    <div class="header-right">
+            <h2 class="sikkim_heading">Sikkim Teacher  Eligibility Test (STET)</h2>
+    </div>
+</div><br>
+
+<div class="split left">
+  <div class="centered">
+    <h2>Notices</h2>
+    <hr style="width: 100%;">
+  </div>
+  
+  <ul class="notice_arrangement">
+    <li><a href="#">Result</a></li>
+    <li><a href="#">Admit Card</a></li>
+    <li><a href="#">Apply Details</a></li>
+  </ul> 
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <h2>Sign in</h2>
+    <hr>
+  </div>
+  <form action="/action_page.php" method="post">
+  
+    <div class="container loginAlign">
+      <label for="uname"><b>Application Number</b></label>
+      <input type="text" placeholder="Enter Application Number" name="uname" id="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+      <button type="button" onclick="mylogin()">Login</button>
+      
+    </div>
+  
+    <div class="container loginAlignForget" style="background-color:#f1f1f1">
+      <span class="signup"><a href="register.html">Sign up</a></span>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+  
+  
+
+</div>
+<div class="w3hubs-footer">
+   	  
+  <div class="w3hubs-icon">
+      <ul>
+          <li><a href="#" target="black"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-youtube-play"></i></a></li>
+      </ul>
+  </div>
+  <div class="w3hubs-nav">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li class="p1"><a href="#">Contact Us</a></li>
+          
+
+      </ul>
+  </div>
+  <div class="w3hubs-nav1">
+      <ul>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">new</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Media</a></li>
+          
+          
+      </ul>
+  </div>
+
+  <div class="w3hubs-nav2">
+      <ul>
+          
+          <li><a href="#" title="To Top"><i class="fa fa-chevron-down"></i></a></li>
+          
+      </ul>
+  </div>
+</div>
+<br>
+<div class="footer-end">
+  <p><a href="#">Sikkim Educational Department</a></p>
+</div>
+
+<script>
+    function mylogin()
+    {
+        console.log("work");
+        console.log(document.getElementById("uname").value);
+        console.log(document.getElementById("psw").value);
+        $.post("/loginPageHandler", {uname:document.getElementById("uname").value, psw:document.getElementById("psw").value} , function(data,text,jqXHR) {
+        var jsdata = JSON.parse(data);
+        console.log("coming");
+        console.log(jsdata);
+        if(jsdata["status"] == "correct")
+        {
+        localStorage.setItem("details",data);
+        alert("Logged in successfully");
+    }
+    else
+    {
+        alert("Wrong Password");
+    }
+        }).fail(function(j, text,errorthrown) {
+            alert("Error in Data");
+        })
+    }
+
+</script>
+
+</body>
+</html>
