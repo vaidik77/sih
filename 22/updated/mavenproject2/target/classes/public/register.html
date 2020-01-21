@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="header_footer.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=date] {
+    width: 25%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=radio] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    resize: vertical;
+  }
+
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  margin-top: 2%;
+  padding: 1.2% 2.2%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  left: 45%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  width: 80%;
+  margin: 2% 10%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 2% 3%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+  * {
+     box-sizing: border-box;
+ }
+ 
+ body {
+ font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ 
+ 
+ 
+ </style>
+</head>
+<body>
+
+
+  <div class="header">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Seal_of_Sikkim.svg/1200px-Seal_of_Sikkim.svg.png"
+      height="80px">
+    <div class="header-right">
+      <h1>Sikkim Teacher Eligibility Test (STET)</h1>
+    </div>
+  </div>
+
+
+<div class="container">
+  <h2 style="text-align: center;">REGISTER HERE</h2>
+
+  <form action="/registerPageHandler" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="lname">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="email" name="email" placeholder="Your email here..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Gender</label>
+        </div>
+        <div class="col-75">
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other  
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Mobile Number</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="mobile" name="mobile" placeholder="Your mobile number here..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">DOB</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="dob" name="dob">
+        </div>
+      </div>
+    
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+    
+  </form>
+</div>
+
+
+<footer>
+  <div class="w3hubs-footer">
+
+    <div class="w3hubs-icon">
+      <ul>
+        <li><a href="#" target="black"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" target="black"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#" target="black"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" target="black"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#" target="black"><i class="fa fa-youtube-play"></i></a></li>
+      </ul>
+    </div>
+    <div class="w3hubs-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li class="p1"><a href="#">Contact Us</a></li>
+
+
+      </ul>
+    </div>
+    <div class="w3hubs-nav1">
+      <ul>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">new</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Media</a></li>
+
+
+      </ul>
+    </div>
+
+    <div class="w3hubs-nav2">
+      <ul>
+
+        <li><a href="#" title="To Top"><i class="fa fa-chevron-down"></i></a></li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-end">
+    <p>Desing By: <a href="https://w3hubs.com/">W3HUBS.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

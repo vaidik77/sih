@@ -1,0 +1,193 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>File Validation-1</title> 
+    <style>
+     * {
+        box-sizing: border-box;
+    }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #666;
+    /* padding: 20px; */
+    text-align: center;
+    font-size: 40px;
+    color: white;
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+  }
+  
+  /* Clear floats after the columns */
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  .heading{
+      font-size: xx-large;
+  }
+  ul{
+      list-style: none;
+  }
+  li{
+      display: inline-block;
+  }
+  .image1{
+      margin-right:22% ;
+      padding-top: 5%;
+  }
+  .setheading{
+      /* align-content: center; */
+      /* padding-bottom: 10%; */
+  }
+
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+ 
+  
+    </style>
+</head> 
+  
+<body> 
+    
+    <p id="size"></p> 
+
+    <header>
+    
+        <ul>
+            <li class='image1'><img src="https://images.vexels.com/media/users/3/142789/isolated/preview/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo-by-vexels.png" height="180px"></li>
+            <li><h2 class="setheading">State Teacher Eligibility Test</h2></li>
+        </ul>
+        
+      </header>
+
+      <!-- <p> 
+        <input type="file"
+               id="file" 
+               onchange="Filevalidation()" /> 
+    </p>  -->
+    <section>
+    <h2>
+        Upload Photo and Signature
+    </h2>
+    <table border="1" cellpadding="10">
+        <tr><td>Photo</td>
+        <td><input type="file"
+            id="photo" 
+            onchange="Filevalidationphoto()" /> 
+ </p></td></tr>
+ <tr><td>Signature</td>
+    <td><input type="file"
+        id="signature" 
+        onchange="Filevalidationsign()" /> 
+</p></td></tr>
+<button class="button">Submit</button>
+    </table>
+</section>
+</body> 
+  
+<script> 
+    Filevalidationphoto = () => { 
+        const fi = document.getElementById('photo'); 
+        // Check if any file is selected. 
+        if (fi.files.length > 0) { 
+            for (const i = 0; i <= fi.files.length - 1; i++) { 
+  
+                const fsize = fi.files.item(i).size; 
+                const file = Math.round((fsize / 1024)); 
+                // The size of the file. 
+                if (file >= 4096) { 
+                    alert( 
+                      "File too Big, please select a file less than 4mb"); 
+                } else if (file < 2048) { 
+                    alert( 
+                      "File too small, please select a file greater than 2mb"); 
+                } else { 
+                    document.getElementById('size').innerHTML = '<b>'
+                    + file + '</b> KB'; 
+                } 
+            } 
+        } 
+    } 
+
+    Filevalidationsign = () => { 
+        const fi = document.getElementById('signature'); 
+        // Check if any file is selected. 
+        if (fi.files.length > 0) { 
+            for (const i = 0; i <= fi.files.length - 1; i++) { 
+  
+                const fsize = fi.files.item(i).size; 
+                const file = Math.round((fsize / 1024)); 
+                // The size of the file. 
+                if (file >= 4096) { 
+                    alert( 
+                      "File too Big, please select a file less than 4mb"); 
+                } else if (file < 2048) { 
+                    alert( 
+                      "File too small, please select a file greater than 2mb"); 
+                } else { 
+                    document.getElementById('size').innerHTML = '<b>'
+                    + file + '</b> KB'; 
+                } 
+            } 
+        } 
+    } 
+
+</script> 
+  
+</html> 
+
+
