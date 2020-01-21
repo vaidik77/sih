@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./footer.css">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+        
+  
+  .split {  
+  height: 48%;
+  width: 49%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  margin-top: 11%;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.loginAlignForget{
+  width:70%;
+}
+
+.left {
+  width: 75%;
+  left: 0;
+}
+
+.right {
+  width: 25%;
+  right: 0;
+}
+.text_login{
+  font-size:x-large;
+}
+.centered {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.notice_arrangement{
+  position: absolute;
+  top: 25%;
+  left:10%;
+
+}
+.loginAlign{
+  position: absolute;
+  top: 25%;
+  left: 20%;
+}
+
+.loginAlignForget{
+  position: absolute;
+  top:80%;
+  left:24%;
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: larger;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+
+button {
+  background-color:rgb(74, 168, 115);
+  color: white;
+  padding: 14px 20px;
+  margin-top: 16px;
+  margin-left: 29%;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 30%;
+  font-size: larger;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+span.signup{
+  float: left;
+  
+  font-size: 22px;
+}
+hr{
+  margin-top: -20%;
+}
+
+.container {
+  margin-left: -10%;
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 2px;
+  font-size: 22px;
+}
+.list_style{
+  font-size: x-large;
+
+}
+a:link {
+
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+a:visited{
+  text-align: center;
+  text-decoration: none;
+  color:#282828;
+  display: inline-block;
+
+}
+a:hover {
+  
+  color:red;
+}
+.header_style{
+  height: 110px;
+}
+.setLogo_style{
+  width: 8%;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+  
+  </style>
+</head>
+<body>
+  <div class="header header_style">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Seal_of_Sikkim.svg/1200px-Seal_of_Sikkim.svg.png" height="70px" class="setLogo setLogo_style ">
+    <div class="header-right">
+            <h2 class="sikkim_heading">Sikkim Teacher  Eligibility Test (STET)</h2>
+    </div>
+</div><br>
+
+<div class="split left" >
+  <div class="centered">
+    <h2 style="font-size: xx-large;" >Notices</h2>
+    <hr style="width: 100%;">
+  </div>
+  
+  <ul class="notice_arrangement list_style">
+    <li><a href="#">Result</a></li>
+    <li><a href="#">Admit Card</a></li>
+    <li><a href="#">Apply Details</a></li>
+  </ul> 
+</div>
+
+<div class="split right" style="border: 1px solid rgb(204, 194, 194); border-radius: 15px; margin-right: 2%;">
+  <div class="centered">
+    <h2 style="font-size: xx-large;">Sign in</h2>
+    <hr width="100%">
+  </div>
+  <form action="/action_page.php" method="post">
+  
+    <div class="container loginAlign">
+      <!-- <label for="uname" class="text_login"><b>Application Number</b></label> -->
+      <input type="text" placeholder="Enter Application Number" name="uname" id="uname" required>
+  
+      <!--  <label for="psw" class="text_login"><b>Password</b></label> --> 
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+      <button type="button" onclick="mylogin()">Login</button>
+      
+    </div>
+  
+    <div class="container loginAlignForget">
+      <span class="signup"><a href="register.html">Sign up</a></span>
+      <span class="psw"><a href="#">Forgot Password</a></span>
+    </div>
+  </form>
+  
+  
+
+</div>
+<div class="w3hubs-footer" style="margin-top:35% ;">
+   	  
+  <div class="w3hubs-icon">
+      <ul>
+          <li><a href="#" target="black"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#" target="black"><i class="fa fa-youtube-play"></i></a></li>
+      </ul>
+  </div>
+  <div class="w3hubs-nav">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li class="p1"><a href="#">Contact Us</a></li>
+          
+
+      </ul>
+  </div>
+
+</div>
+<br>
+<div class="footer-end">
+  <p><a href="#" class="heading_footer">Sikkim Educational Department</a></p>
+</div>
+
+<script>
+    function mylogin()
+    {
+        console.log("work");
+        console.log(document.getElementById("uname").value);
+        console.log(document.getElementById("psw").value);
+        $.post("/loginPageHandler", {uname:document.getElementById("uname").value, psw:document.getElementById("psw").value} , function(data,text,jqXHR) {
+        var jsdata = JSON.parse(data);
+        console.log("coming");
+        console.log(jsdata);
+        if(jsdata["status"] == "correct")
+        {
+        localStorage.setItem("details",data);
+        alert("Logged in successfully");
+    }
+    else
+    {
+        alert("Wrong Password");
+    }
+        }).fail(function(j, text,errorthrown) {
+            alert("Error in Data");
+        })
+    }
+
+</script>
+
+</body>
+</html>

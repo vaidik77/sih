@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+   
+    * {
+        box-sizing: border-box;
+    }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #666;
+    /* padding: 20px; */
+    text-align: center;
+    font-size: 40px;
+    color: white;
+  }
+  .heading{
+      font-size: xx-large;
+  }
+  ul{
+      list-style: none;
+  }
+  li{
+      display: inline-block;
+  }
+  .image1{
+      margin-right:22% ;
+      padding-top: 5%;
+  }
+  .setheading{
+      /* align-content: center; */
+      /* padding-bottom: 10%; */
+  }
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 {
+  width: 100%;    
+  background-color: #f1f1c1;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  }
+ 
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+ </style>
+  </head>
+  <body>
+    <header>
+    
+        <ul>
+            <li class='image1'><img src="https://images.vexels.com/media/users/3/142789/isolated/preview/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo-by-vexels.png" height="180px"></li>
+            <li><h2 class="setheading">State Teacher Eligibility Test</h2></li>
+        </ul>
+        
+      </header>
+
+      <section>
+        <table style="width:100%">
+            <tr>
+              <th>Name of the document</th>
+              <th>Choose file</th>
+            </tr>
+            <tr>
+              <td><label for="">Aadhar Card</label></td>
+              <td><input type="file" class="file" name=""></td>
+            </tr>
+            <tr>
+                <td><label for="">PAN card</label></td>
+                <td><input type="file" class="file" name=""></td>
+              </tr>
+              <tr>
+                <td><label for="">10th marksheet</label></td>
+                <td><input type="file" class="file" name=""></td>
+              </tr>
+              <tr>
+                <td><label for="">12th marksheet</label></td>
+                <td><input type="file" class="file" name=""></td>
+              </tr>
+              <tr>
+                <td><label for="">Graduation</label></td>
+                <td><input type="file" id="#" class="file" name=""></td>
+              </tr>
+              <tr>
+                <td><label for="">Post Graduation</label></td>
+                <td><input type="file" id="#" class="file" name=""></td>
+              </tr>
+            
+        </table>      
+      </section>
+      <br>
+
+    <div class="row">
+        <input type="submit" value="Submit and Continue">
+      </div>
+  </body>
+  <script>
+      Filevalidation = () => { 
+        const fi = document.querySelector('.file'); 
+        // Check if any file is selected. 
+        if (fi.files.length > 0) { 
+            for (const i = 0; i <= fi.files.length - 1; i++) { 
+  
+                const fsize = fi.files.item(i).size; 
+                const file = Math.round((fsize / 1024)); 
+                // The size of the file. 
+                if (file >= 4096) { 
+                    alert( 
+                      "File too Big, please select a file less than 4mb"); 
+                } else if (file < 2048) { 
+                    alert( 
+                      "File too small, please select a file greater than 2mb"); 
+                } else { 
+                    document.getElementById('size').innerHTML = '<b>'
+                    + file + '</b> KB'; 
+                } 
+            } 
+        } 
+    } 
+
+  </script>
+</html>
